@@ -128,12 +128,12 @@ p{
 }
 
 .cover{
-    width: 95px; 
-    height: 95px;
+    width: 105px; 
+    height: 105px;
 }
 
 .recommend-info{
-    height: 85px;
+    height: 95px;
     flex: 1;
     background-color: rgb(43, 43, 43);
     padding: 5px;
