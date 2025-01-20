@@ -34,8 +34,12 @@
             {% elif (item.2|count)>1 %}
                 {{ "Artists: " }}
                 {{ item.2 | join(", ") }}
+            {% endif %}</p>
+            <p>{% if not(item.4 == "") %}
+                {{ "Release date: "}}
+                {{ item.4 }}
             {% endif %}
-        </p>
+            </p>
         </div>
         <a href="https://open.spotify.com/track/{{item.3}}" class="spotlink" target="_blank"><img src="https://cdn.freebiesupply.com/logos/large/2x/spotify-2-logo-png-transparent.png" alt="spotify logo"/></a>
     </section>
