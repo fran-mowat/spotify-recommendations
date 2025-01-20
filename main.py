@@ -202,6 +202,18 @@ def get_trackdetails(track_list):
     temp.append(artist_names)
 
     temp.append(track["id"])
+    release_date = track["album"]["release_date"]
+
+    if (len(release_date) == 10):
+      release_date = datetime.datetime.strptime(release_date, '%Y-%m-%d').strftime('%d/%m/%Y')
+    elif (len(release_date) == 7):
+      release_date = datetime.datetime.strptime(release_date, '%Y-%m').strftime('%m/%Y')
+    elif (len(release_date) == 4):
+      release_date = datetime.datetime.strptime(release_date, '%Y')
+    else: 
+      release_date = ""
+
+    temp.append(release_date)
 
     total_duration += track["duration_ms"]
 
@@ -241,6 +253,18 @@ def get_genrerecommend():
       temp.append(artist_names)
 
       temp.append(track["id"])
+      release_date = track["album"]["release_date"]
+
+      if (len(release_date) == 10):
+        release_date = datetime.datetime.strptime(release_date, '%Y-%m-%d').strftime('%d/%m/%Y')
+      elif (len(release_date) == 7):
+        release_date = datetime.datetime.strptime(release_date, '%Y-%m').strftime('%m/%Y')
+      elif (len(release_date) == 4):
+        release_date = datetime.datetime.strptime(release_date, '%Y')
+      else: 
+        release_date = ""
+
+      temp.append(release_date)
 
       total_duration += track["duration_ms"]
 
