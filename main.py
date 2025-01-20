@@ -274,7 +274,7 @@ def get_genrerecommend():
   second = round((total_duration % 60000) / 1000)
   total_duration = str(minute) + " minutes, " + str(second) + " seconds" 
 
-  return track_details, total_duration
+  return track_details, total_duration, genreselect
 
 
 #APP ROUTES 
@@ -296,8 +296,8 @@ def playlist_page():
 
 @app.route('/genreresults') 
 def genreresults_page():
-  recommended_songs, total_duration = get_genrerecommend()
-  return render_template('genreresults.html', genre_recommendations=recommended_songs, genrelength=total_duration, song_count=len(recommended_songs)) 
+  recommended_songs, total_duration, genreselect = get_genrerecommend()
+  return render_template('genreresults.html', genre_recommendations=recommended_songs, genrelength=total_duration, song_count=len(recommended_songs), selected_genre=genreselect) 
 
 @app.route('/playlistresults/<playlist_id>') 
 def playlistresults_page(playlist_id):
