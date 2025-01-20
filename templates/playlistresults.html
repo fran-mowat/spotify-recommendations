@@ -34,8 +34,7 @@
     </div>
 
     <div class="song-info"> 
-        {{ song_count }} recommended songs; 
-        {{ recommend_length }} of recommended music
+        <p>{{ song_count }} recommended songs; {{ recommend_length }} of recommended music</p>
     </div>
 
     {% for item in recommend_info %} 
@@ -54,7 +53,6 @@
         </div>
         <a href="https://open.spotify.com/track/{{item.3}}" target="_blank" class="spotlink"><img src="https://cdn.freebiesupply.com/logos/large/2x/spotify-2-logo-png-transparent.png" alt="spotify logo"/></a>
     </section>
-    <br><br>
 
     {% endfor %} 
 
