@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Analyser</title>
+    <link rel="stylesheet" href="../static/style.css"> 
+    <link rel="shortcut icon" href="../static/spotify.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="top"></div>
+
+    <header>
+        <a href="/playlist" class="button"><img src="../static/back.svg" alt="back icon" class="button-icon"></a>
+    </header>
+    
+    <h2>Playlist information:</h2>
+    <div class="flex-container">
+        <img src="{{ image_url }}" class="coverphoto"/>
+
+        <div class="playlist-info"> 
+            <p>{{ playlist_name }}</p>
+            <p>Created by: {{ playlist_owner }}</p>
+            <br>
+            <p>Number of tracks: {{ track_total }}</p>
+            <p>Average duration: {{ duration }}</p>
+            <p>Playlist updated: {{ last_edit }}</p>
+            <br>
+            <p>Top genre: {{ top_genre }}</p>
+            <p>Most repeated decade: {{ common_decade }}</p>
+        </div>
+    </div>
+
+    <div class="song-info"> 
+        {{ song_count }} recommended songs; 
+        {{ recommend_length }} of recommended music
+    </div>
+
+    {% for item in recommend_info %} 
+
+    <section class="flex-container recommendations">
+        <img src='{{item.1}}' alt="album cover" class="cover"/>
+        <div class="recommend-info">
+            <p>Song: {{item.0}} </p>
+            <p>{% if (item.2|count) == 1 %} 
+                {{ "Artist: " }}
+                {{ item.2.0 }}
+            {% elif (item.2|count)>1 %}
+                {{ "Artists: " }}
+                {{ item.2 | join(", ") }} 
+            {% endif %}</p>
+        </div>
+        <a href="https://open.spotify.com/track/{{item.3}}" target="_blank" class="spotlink"><img src="https://cdn.freebiesupply.com/logos/large/2x/spotify-2-logo-png-transparent.png" alt="spotify logo"/></a> 
+    </section>
+    <br><br>
+
+    {% endfor %} 
+
+    <a href="#top" class="top-button"><img src="../static/up_arrow.svg" alt="up arrow icon"> Back to top</a>
+</body>
+</html>

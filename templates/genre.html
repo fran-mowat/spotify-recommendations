@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Discovery</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="../static/spotify.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <a href="/" class="button"><img src="../static/home.svg" alt="home icon" class="button-icon"></a> 
+  </header>
+
+  <h2>Please select a genre below:</h2>
+  <div id="genreselect">
+      <a href='./genreresults' class="button" id="pop">Pop</a> 
+      <a href='./genreresults' class="button" id="rock">Rock</a>
+      <a href='./genreresults' class="button" id="soul">Soul</a> 
+      <a href='./genreresults' class="button" id="hip-hop">Hip-hop</a>
+      <a href='./genreresults' class="button" id="indie">Indie</a>
+      <a href='./genreresults' class="button" id="reggae">Reggae</a>
+      <a href='./genreresults' class="button" id="country">Country</a>
+      <a href='./genreresults' class="button" id="jazz">Jazz</a>
+      <a href='./genreresults' class="button" id="classical">Classical</a>
+      <a href='./genreresults' class="button" id="metal">Metal</a>
+      <a href='./genreresults' class="button" id="punk">Punk</a>
+      <a href='./genreresults' class="button" id="blues">Blues</a>
+  </div>
+
+  <script>
+    document.getElementById("pop").onclick = function() {
+      genreselect = "pop"
+      document.cookie = "genre=" + genreselect; 
+    };
+  
+    document.getElementById("rock").onclick = function() {
+      genreselect = "rock"
+      document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("soul").onclick = function() {
+      genreselect = "soul"
+      document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("hip-hop").onclick = function() {
+      genreselect = "hip-hop"
+      document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("indie").onclick = function() {
+      genreselect = "indie"
+        document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("reggae").onclick = function() {
+      genreselect = "reggae"
+        document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("country").onclick = function() {
+      genreselect = "country"
+        document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("jazz").onclick = function() {
+      genreselect = "jazz"
+        document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("classical").onclick = function() {
+      genreselect = "classical"
+        document.cookie = "genre=" + genreselect;
+    };
+
+    document.getElementById("metal").onclick = function() {
+      genreselect = "metal"
+        document.cookie = "genre=" + genreselect;
+      
+    };
+
+    document.getElementById("punk").onclick = function() {
+      genreselect = "punk"
+        document.cookie = "genre=" + genreselect;
+
+    };
+
+    document.getElementById("blues").onclick = function() {
+      genreselect = "blues"
+        document.cookie = "genre=" + genreselect;
+    };
+  </script>
+</body>
+</html>
