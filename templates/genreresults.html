@@ -7,7 +7,6 @@
     <title>Genre Discovery</title>
     <link rel="stylesheet" href="../static/style.css"> 
     <link rel="shortcut icon" href="../static/spotify.svg" type="image/x-icon">
-    <script type="text/javascript" src="{{ url_for('static', filename='../static/genreresults.js') }}" defer></script>
 </head>
 
 <body>
@@ -17,7 +16,7 @@
         <a href="/genre" class="button"><img src="../static/back.svg" alt="back icon" class="button-icon"></a>
     </header>
 
-    <h2 id="genre"></h2>
+    <h2 id="genre">{{ selected_genre }}</h2>
 
     <div class="song-info"> 
         <p>{{ song_count }} recommended songs; {{ genrelength }} minutes of recommended music</p>
