@@ -7,6 +7,7 @@
     <title>Genre Discovery</title>
     <link rel="stylesheet" href="../static/style.css"> 
     <link rel="shortcut icon" href="../static/spotify.svg" type="image/x-icon">
+    <script type="text/javascript" src="{{ url_for('static', filename='../static/genreresults.js') }}" defer></script>
 </head>
 
 <body>
@@ -47,13 +48,6 @@
     {% endfor %} 
 
     <a href="#top" class="top-button"><img src="../static/up_arrow.svg" alt="up arrow icon"> Back to top</a>
-
-    <script>
-        console.log(document.cookie.split('=')[1]) //obtaining the cookie containing the selected genre 
-        const selected_genre = document.cookie.split('=')[1] //assigning the selected genre to a variable
-        let tag_to_change = document.getElementById('genre'); 
-        tag_to_change.innerHTML = 'Selected genre: ' + selected_genre //finding the element with the id genre (the heading of the page) and changing its contents to read 'Selected genre: {insert selected genre}'
-    </script>
 </body>
 </html>
 
