@@ -41,7 +41,7 @@
     {% for item in recommend_info %} 
 
     <section class="flex-container recommendations">
-        <img src='{{item.1}}' alt="album cover" class="cover"/>
+        <a href="https://open.spotify.com/track/{{item.3}}" target="_blank" class="embedded-link"><img src='{{item.1}}' alt="album cover" class="cover"/></a>
         <div class="recommend-info">
             <p>Song: {{item.0}} </p>
             <p>{% if (item.2|count) == 1 %} 
@@ -52,7 +52,7 @@
                 {{ item.2 | join(", ") }} 
             {% endif %}</p>
         </div>
-        <a href="https://open.spotify.com/track/{{item.3}}" target="_blank" class="spotlink"><img src="https://cdn.freebiesupply.com/logos/large/2x/spotify-2-logo-png-transparent.png" alt="spotify logo"/></a> 
+        <a href="https://open.spotify.com/track/{{item.3}}" target="_blank" class="spotlink"><img src="https://cdn.freebiesupply.com/logos/large/2x/spotify-2-logo-png-transparent.png" alt="spotify logo"/></a>
     </section>
     <br><br>
 
