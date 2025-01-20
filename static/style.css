@@ -140,6 +140,16 @@ p{
     line-height: 1.2;
 }
 
+.release-date{
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .release-date{
+        display: block;
+    }
+}
+
 .flex-container .spotlink{
     width: auto;
     margin: 0;
