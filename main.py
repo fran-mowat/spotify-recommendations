@@ -255,8 +255,8 @@ def get_genrerecommend():
 
 #APP ROUTES 
 @app.route('/')  
-def main_page(): 
-  return render_template('main.html')
+def home_page(): 
+  return render_template('index.html')
 
 @app.route('/genre') 
 def genre_page():
