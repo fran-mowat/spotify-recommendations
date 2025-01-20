@@ -122,6 +122,11 @@ p{
     justify-content: space-around;
 }
 
+.recommendations .embedded-link{
+    padding: 0;
+    width: fit-content;
+}
+
 .cover{
     width: 95px; 
     height: 95px;
