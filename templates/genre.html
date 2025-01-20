@@ -7,6 +7,7 @@
     <title>Genre Discovery</title>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="shortcut icon" href="../static/spotify.svg" type="image/x-icon">
+    <script type="text/javascript" src="{{ url_for('static', filename='../static/genre.js') }}" defer></script>
 </head>
 
 <body>
@@ -29,69 +30,5 @@
       <a href='./genreresults' class="button" id="punk">Punk</a>
       <a href='./genreresults' class="button" id="blues">Blues</a>
   </div>
-
-  <script>
-    document.getElementById("pop").onclick = function() {
-      genreselect = "pop"
-      document.cookie = "genre=" + genreselect; 
-    };
-  
-    document.getElementById("rock").onclick = function() {
-      genreselect = "rock"
-      document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("soul").onclick = function() {
-      genreselect = "soul"
-      document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("hip-hop").onclick = function() {
-      genreselect = "hip-hop"
-      document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("indie").onclick = function() {
-      genreselect = "indie"
-        document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("reggae").onclick = function() {
-      genreselect = "reggae"
-        document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("country").onclick = function() {
-      genreselect = "country"
-        document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("jazz").onclick = function() {
-      genreselect = "jazz"
-        document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("classical").onclick = function() {
-      genreselect = "classical"
-        document.cookie = "genre=" + genreselect;
-    };
-
-    document.getElementById("metal").onclick = function() {
-      genreselect = "metal"
-        document.cookie = "genre=" + genreselect;
-      
-    };
-
-    document.getElementById("punk").onclick = function() {
-      genreselect = "punk"
-        document.cookie = "genre=" + genreselect;
-
-    };
-
-    document.getElementById("blues").onclick = function() {
-      genreselect = "blues"
-        document.cookie = "genre=" + genreselect;
-    };
-  </script>
 </body>
 </html>
